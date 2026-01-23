@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Real Estate, Lands" />
+    <meta name="description" content="Real Estate with Golden Chidi" />
+    <title>Contact</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    /></noscript>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-bar-row listingNav">
+          <div class="nav-left">
+            <a href="index.html" class="nav-logo-link">
+              <img src="images/website logo.png" alt="Logo" class="nav-logo" />
+            </a>
+            <a href="index.html" class="nav-title">Golden Chidi</a>
+          </div>
+
+          <div class="nav-right">
+            <a href="/">Home</a>
+            <a href="/listings.html">Properties</a>
+            <a href="/about.html">About</a>
+            <a href="/training.html">Training</a>
+
+            <a href="/contact.html" class="nav-btn"
+              ><button>Contact<i class="fa-solid fa-arrow-right"></i></button
+            ></a>
+          </div>
+
+          <div class="hamburger" onclick="toggleMenu(this)">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <ul class="mobile-menu">
+          <li><a href="pages/listings.html">Properties</a></li>
+          <li><a href="pages/about.html">About</a></li>
+          <li><a href="pages/training.html">Training</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+          <li>
+            <a href="pages/contact.html"
+              >Schedule a Call<i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="contactHead">
+      <h2>Let's Connect</h2>
+      <p>
+        Ready to find your dream property or elevate your real estate career?
+        Schedule a consultation or reach out directly.
+      </p>
+    </div>
+
+    <div class="contactTileRow">
+      <div class="contactTile color1">
+        <i class="fa-solid fa-phone"></i>
+        <h3>Call Me</h3>
+        <p>Mon-Fri, 9am-6pm PST</p>
+        <p><a href="tel:+2349012345678">+234 901 234 5678</a></p>
+      </div>
+      <div class="contactTile color2">
+        <i class="fa-solid fa-envelope"></i>
+        <h3>Email Me</h3>
+        <p>I'll respond within 24 hours</p>
+        <p><a href="mailto:doxahmedia@gmail.com">doxahmedia@gmail.com</a></p>
+      </div>
+      <div class="contactTile color3">
+        <i class="fa-solid fa-map-marker-alt"></i>
+        <h3>Visit Office</h3>
+        <p>By appointment only</p>
+        <p class="address">Lagos, Nigeria</p>
+      </div>
+    </div>
+    <!-- Form Wrapper -->
+    <section id="formBackground">
+      <div class="formwrapper contactFormWrapper">
+        <h3>Book a Consultation</h3>
+        <div class="contactBtnRow">
+          <button id="personalBtn">Personal Consultation</button
+          ><button id="teamBtn">Team Training</button>
+        </div>
+        <!-- Personal Form -->
+        <form
+          id="personalForm"
+          action="https://formsubmit.co/unaegbugolden@yahoo.com"
+          method="POST"
+          class="contact-form"
+        >
+          <!-- Honeypot anti-spam field (invisible to humans) -->
+          <input type="text" name="_honey" style="display: none" />
+
+          <!-- Redirect on success -->
+          <input
+            type="hidden"
+            name="_next"
+            value="https://goldenchidi.site/thank-you.html"
+          />
+
+          <!-- Redirect on error -->
+          <input
+            type="hidden"
+            name="_error"
+            value="https://goldenchidi.site/error.html"
+          />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name*</label>
+              <input
+                type="text"
+                id="firstName"
+                name="first_name"
+                autocomplete="given-name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="lastName">Last Name*</label>
+              <input
+                type="text"
+                id="lastName"
+                name="last_name"
+                autocomplete="family-name"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email*</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone*</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="service">I'm interested in*</label>
+            <select id="service" name="service" required>
+              <option value="">Select an option</option>
+              <option value="buying">Buying a Property</option>
+              <option value="selling">Selling a Property</option>
+              <option value="buying&selling">Buying & Selling</option>
+              <option value="investment">Investment</option>
+              <option value="coaching">Individual Coaching</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="date">Preferred Date & Time</label>
+            <input type="datetime-local" id="date" name="date" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message*</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">
+            Schedule Consultation
+          </button>
+        </form>
+        <!-- Personal form ends -->
+
+        <!-- Team Form starts -->
+        <form
+          id="teamForm"
+          action="https://formsubmit.co/unaegbugolden@yahoo.com"
+          method="POST"
+          class="contact-form"
+        >
+          <!-- Honeypot anti-spam field (invisible to humans) -->
+          <input type="text" name="_honey" style="display: none" />
+
+          <!-- Redirect on success -->
+          <input
+            type="hidden"
+            name="_next"
+            value="https://goldenchidi.site/thank-you.html"
+          />
+
+          <!-- Redirect on error -->
+          <input
+            type="hidden"
+            name="_error"
+            value="https://goldenchidi.site/error.html"
+          />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Your Name*</label>
+              <input type="text" id="fullName" name="fullName" required />
+            </div>
+            <div class="form-group">
+              <label for="orgName">Organisation Name*</label>
+              <input type="text" id="orgName" name="orgName" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email*</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone*</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="teamSize">Team Size*</label>
+              <select id="teamSize" name="teamSize" required>
+                <option value="">Select team size</option>
+                <option value="group1">1-5 agents</option>
+                <option value="group2">6-10 agents</option>
+                <option value="group3">11-20 agents</option>
+                <option value="group4">21-50 agents</option>
+                <option value="group5">50+ agents</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="trainingType">Training Type*</label>
+              <select id="trainingType" name="trainingType" required>
+                <option value="">Select training type</option>
+                <option value="oneTime">One-time Workshop</option>
+                <option value="series">Training Series</option>
+                <option value="coaching">Ongoing Coaching</option>
+                <option value="custom">Custom Program</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="date">Preferred Date & Time</label>
+            <input type="datetime-local" id="date" name="date" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message*</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">
+            Schedule Consultation
+          </button>
+        </form>
+        <!-- Team form ends -->
+      </div>
+    </section>
+    <!-- Form Wrapper End -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-columns">
+          <div class="footer-section align-left">
+            <p><span>Chidi Golden</span></p>
+            <p class="leftP">
+              Elevating real estate excellence through expert sales and
+              professional training
+            </p>
+          </div>
+          <div class="footer-section align-center">
+            <p><strong>Quick Links</strong></p>
+            <a href="/">Home</a>
+            <a href="/listings.html">Properties</a>
+            <a href="/about.html">About</a>
+            <a href="/training.html">Training</a>
+            <a href="/contact.html#formBackground">Book Consultaton</a>
+            <a href="/contact.html">Contact</a>
+          </div>
+          <div class="footer-section align-center2">
+            <p><strong>Connect</strong></p>
+            <a
+              href="https://www.instagram.com/listings_bygolden"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a
+              href="https://www.linkedin.com/in/golden-chidi-unaegbu-52b3b5150"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a
+              href="https://youtube.com/@thegoldenchidi"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-youtube"></i> Youtube
+            </a>
+            <a
+              href="https://www.facebook.com/unaegbu.golden"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-facebook"></i> Facebook
+            </a>
+          </div>
+          <div class="footer-section align-right">
+            <p class="mailHead"><strong>Stay Updated</strong></p>
+            <p>Get market insights & training tips</p>
+            <form
+              action="https://formsubmit.co/doxahmedia@gmail.com"
+              method="POST"
+              class="contact-form"
+            >
+              <!-- Honeypot anti-spam field (invisible to humans) -->
+              <input type="text" name="_honey" style="display: none" />
+
+              <!-- Redirect on success -->
+              <input
+                type="hidden"
+                name="_next"
+                value="https://goldenchidi.site/thank-you.html"
+              />
+
+              <!-- Redirect on error -->
+              <input
+                type="hidden"
+                name="_error"
+                value="https://goldenchidi.site/error.html"
+              />
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Your Email"
+                />
+                <button type="submit">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </form>
+            <p class="consent-note">
+              By submitting your email, you agree to receive newsletters from
+              us.
+            </p>
+          </div>
+        </div>
+        <span class="footLine"></span>
+        <p class="footer-copy">© 2026 Golden Chidi. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Real Estate, Lands" />
+    <meta name="description" content="Real Estate with Golden Chidi" />
+    <title>Golden Chidi</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    /></noscript>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-bar-row">
+          <div class="nav-left">
+            <a href="index.html" class="nav-logo-link">
+              <img src="images/website logo.png" alt="Logo" class="nav-logo" />
+            </a>
+            <a href="index.html" class="nav-title">Golden Chidi</a>
+          </div>
+
+          <div class="nav-right">
+            <a href="/">Home</a>
+            <a href="/listings.html">Properties</a>
+            <a href="/about.html">About</a>
+            <a href="/training.html">Training</a>
+
+            <a href="/contact.html" class="nav-btn"
+              ><button>Contact<i class="fa-solid fa-arrow-right"></i></button
+            ></a>
+          </div>
+
+          <div class="hamburger" onclick="toggleMenu(this)">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <ul class="mobile-menu">
+          <li><a href="/listings.html">Properties</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/training.html">Training</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li>
+            <a href="/contact.html"
+              >Schedule a Call<i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="hero-video"
+        poster="images/herobackground.jpg"
+      >
+        <source src="videos/hero-vid.mp4" type="video/mp4" />
+        <!-- Fallback text for very old browsers -->
+        <img src="images/herobackground.jpg" alt="Hero background" />
+      </video>
+      <div class="heroText">
+        <p class="hero1Tile">Licensed Realtor & Team Trainer</p>
+        <div class="heroHead">
+          <h1>Elevating Real Estate</h1>
+          <h2>Excellence & Expertise</h2>
+        </div>
+
+        <p>
+          Helping clients find their dream properties while empowering realtors
+          and teams to reach their full potential through expert training and
+          mentorship
+        </p>
+        <div class="heroBtnRow">
+          <a href="/contact.html#formBackground" class="consultBtn"
+            ><button>
+              Schedule Consultation<i
+                class="fa-solid fa-arrow-right"
+              ></i></button
+          ></a>
+          <a href="/listings.html"><button>View Properties</button></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pedigree fade-to-white">
+      <div class="pedigreeInfo">
+        <h3>50+</h3>
+        <p>Properties Sold</p>
+      </div>
+      <div class="pedigreeInfo">
+        <h3>98%</h3>
+        <p>Client Satisfaction</p>
+      </div>
+      <div class="pedigreeInfo">
+        <h3>15+</h3>
+        <p>Training Sessions</p>
+      </div>
+      <div class="pedigreeInfo">
+        <h3>7+</h3>
+        <p>Years Experience</p>
+      </div>
+    </section>
+
+    <section class="featuredListing">
+      <div class="featHead">
+        <h2>Featured Listings</h2>
+        <a href="/listings.html" class="viewAll"
+          >View all properties<i class="fa-solid fa-arrow-right"></i
+        ></a>
+      </div>
+
+      <div class="featListing">
+        <div class="largeImg">
+          <div class="profile-pic">
+            <img
+              src="images/listingA.jpg"
+              alt="Profile Picture"
+              class="largeListImg"
+            />
+          </div>
+          <div class="largeimgtext">
+            <p class="listTile">New Listing</p>
+            <h3>Modern Luxury Estate</h3>
+            <p>Chevron Estate, Island</p>
+            <h3>N850,000</h3>
+            <p>
+              5 bed <span class="dot"></span> 6 bath
+              <span class="dot"></span> 6,200sqft
+            </p>
+            <a href="/property1.html"><button>View Details</button></a>
+          </div>
+        </div>
+        <div class="smallImg">
+          <div class="smallImgRow">
+            <div class="smallImgBox">
+              <div class="profile-pic">
+                <img
+                  src="images/listingB.jpg"
+                  alt="Profile Picture"
+                  class="smallListImg"
+                />
+              </div>
+              <div class="smallImgText">
+                <h4>Contemporary Family Home</h4>
+                <p>Abraham Adesanya, Lagos</p>
+                <h4>N300,000,000</h4>
+                <p>
+                  4 bed <span class="dot"></span> 4 bath
+                  <span class="dot"></span> 3,250sqft
+                </p>
+                <a href="/property1.html"><button>View Details</button></a>
+              </div>
+            </div>
+            <div class="smallImgBox">
+              <div class="profile-pic">
+                <img
+                  src="images/listingB.jpg"
+                  alt="Profile Picture"
+                  class="smallListImg"
+                />
+              </div>
+              <div class="smallImgText">
+                <h4>Contemporary Family Home</h4>
+                <p>Abraham Adesanya, Lagos</p>
+                <h4>N300,000,000</h4>
+                <p>
+                  4 bed <span class="dot"></span> 4 bath
+                  <span class="dot"></span> 3,250sqft
+                </p>
+                <a href="/property1.html"><button>View Details</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="smallImgRow">
+            <div class="smallImgBox">
+              <div class="profile-pic">
+                <img
+                  src="images/listingB.jpg"
+                  alt="Profile Picture"
+                  class="smallListImg"
+                />
+              </div>
+              <div class="smallImgText">
+                <h4>Contemporary Family Home</h4>
+                <p>Abraham Adesanya, Lagos</p>
+                <h4>N300,000,000</h4>
+                <p>
+                  4 bed <span class="dot"></span> 4 bath
+                  <span class="dot"></span> 3,250sqft
+                </p>
+                <a href="/property1.html"><button>View Details</button></a>
+              </div>
+            </div>
+            <div class="smallImgBox">
+              <div class="profile-pic">
+                <img
+                  src="images/listingB.jpg"
+                  alt="Profile Picture"
+                  class="smallListImg"
+                />
+              </div>
+              <div class="smallImgText">
+                <h4>Contemporary Family Home</h4>
+                <p>Abraham Adesanya, Lagos</p>
+                <h4>N300,000,000</h4>
+                <p>
+                  4 bed <span class="dot"></span> 4 bath
+                  <span class="dot"></span> 3,250sqft
+                </p>
+                <a href="/property1.html"><button>View Details</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="aboutSection">
+      <div class="about">
+        <div class="aboutText">
+          <button class="aboutTile">About Me</button>
+          <h2>
+            Building Careers & <span class="aboutSpan">Closing Dreams</span>
+          </h2>
+          <p>
+            I'm <span>Golden Chidi</span>, and with over 15 years of experience
+            in real estate, I've helped hundreds of clients find their perfect
+            properties while training and mentoring realtor teams across
+            organizations.
+          </p>
+          <p>
+            My dual expertise in sales and education allows me to deliver
+            exceptional results whether you're buying your dream home or
+            building your real estate career.
+          </p>
+          <a href="/about.html" class="learnMore"
+            >Learn more<i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+
+        <div class="aboutImages">
+          <img
+            src="images/profile.jpg"
+            alt="Profile Picture"
+            class="profilePic"
+          />
+          <img
+            src="images/book-team.jpg"
+            alt="Training Picture"
+            class="aboutPic2"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="trainingSection">
+      <h2>Realtor <span>Training Programs</span></h2>
+      <p class="pHead">
+        Empowering realtors and teams with the skills and strategies needed to
+        excel in today's competitive market
+      </p>
+      <div class="grid">
+        <div class="gridImage">
+          <img
+            src="images/training.jpg"
+            alt="Training Picture"
+            class="indiCoach"
+          />
+          <div class="gridOverlay">
+            <i class="fa-solid fa-user"></i>
+            <h3>Individual Coaching</h3>
+            <p>
+              Personalized one-on-one sessions tailored to your specific goals,
+              challenges, and growth areas. Perfect for new agents or
+              experienced realtors looking to level up.
+            </p>
+            <a href="/training.html" class="learnMore"
+              >Learn more<i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="gridBoxStack">
+          <div class="gridBox top">
+            <i class="fa-solid fa-users"></i>
+            <h3>Team Training Workshops</h3>
+            <p>
+              Interactive group sessions designed to build cohesive,
+              high-performing real estate teams with proven strategies and best
+              practices.
+            </p>
+            <a href="/training.html" class="learnMore"
+              >Learn more<i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="gridBox bottom">
+            <i class="fa-solid fa-building"></i>
+            <h3>Organization Programs</h3>
+            <p>
+              Comprehensive training solutions for real estate organizations
+              looking to elevate their entire team's performance and market
+              presence.
+            </p>
+            <a href="/training.html" class="learnMore"
+              >Learn more<i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials fade-to-white">
+      <div class="introText">
+        <p class="btnText">Client Success Stories</p>
+        <h2>Trusted by Clients & Teams</h2>
+        <p>Results from real people across the industry</p>
+      </div>
+      <div class="testimonialRow">
+        <div class="testimonialBox">
+          <span class="stars"></span>
+          <h4>Found Our Dream Home</h4>
+          <p class="tBoxP">
+            Working with this realtor was an absolute pleasure. They understood
+            exactly what we were looking for and found us the perfect property
+            within our budget. Highly recommended!
+          </p>
+          <div class="tag">
+            <div class="initials"><p>CO</p></div>
+            <div class="nameTitle">
+              <h5>Collette Omagbu</h5>
+              <p>Home Owner</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonialBox">
+          <span class="stars"></span>
+          <h4>Transformed Our Team</h4>
+          <p class="tBoxP">
+            The training program completely transformed how our team operates.
+            Sales are up 40% and our agents are more confident than ever. Best
+            investment we've made.
+          </p>
+          <div class="tag">
+            <div class="initials"><p>TE</p></div>
+            <div class="nameTitle">
+              <h5>Thankgod Ezeilo</h5>
+              <p>Brokerage Owner</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonialBox">
+          <span class="stars"></span>
+          <h4>Exceptional Service</h4>
+          <p class="tBoxP">
+            From start to finish, the process was smooth and professional. They
+            negotiated an amazing deal for us and made selling our home
+            stress-free.
+          </p>
+          <div class="tag">
+            <div class="initials"><p>OB</p></div>
+            <div class="nameTitle">
+              <h5>Osamudiamen Blessing</h5>
+              <p>Home Seller</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <img
+        src="images/training.jpg"
+        alt="Training Picture"
+        class="contactImage"
+      />
+      <h2>
+        <span>Ready to</span> elevate <span>your real estate journey?</span>
+      </h2>
+      <a href="/contact.html#formBackground" class="nav-btn"
+        ><button>
+          Book Your Consultation<i class="fa-solid fa-arrow-right"></i></button
+      ></a>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-columns">
+          <div class="footer-section align-left">
+            <p><span>Chidi Golden</span></p>
+            <p class="leftP">
+              Elevating real estate excellence through expert sales and
+              professional training
+            </p>
+          </div>
+          <div class="footer-section align-center">
+            <p><strong>Quick Links</strong></p>
+            <a href="/">Home</a>
+            <a href="/listings.html">Properties</a>
+            <a href="/about.html">About</a>
+            <a href="/training.html">Training</a>
+            <a href="/contact.html#formBackground">Book Consultaton</a>
+            <a href="/contact.html">Contact</a>
+          </div>
+          <div class="footer-section align-center2">
+            <p><strong>Connect</strong></p>
+            <a
+              href="https://www.instagram.com/listings_bygolden"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a
+              href="https://www.linkedin.com/in/golden-chidi-unaegbu-52b3b5150"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a
+              href="https://youtube.com/@thegoldenchidi"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-youtube"></i> Youtube
+            </a>
+            <a
+              href="https://www.facebook.com/unaegbu.golden"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-facebook"></i> Facebook
+            </a>
+          </div>
+          <div class="footer-section align-right">
+            <p class="mailHead"><strong>Stay Updated</strong></p>
+            <p>Get market insights & training tips</p>
+            <form
+              action="https://formsubmit.co/doxahmedia@gmail.com"
+              method="POST"
+              class="contact-form"
+            >
+              <!-- Honeypot anti-spam field (invisible to humans) -->
+              <input type="text" name="_honey" style="display: none" />
+
+              <!-- Redirect on success -->
+              <input
+                type="hidden"
+                name="_next"
+                value="https://goldenchidi.site/thank-you.html"
+              />
+
+              <!-- Redirect on error -->
+              <input
+                type="hidden"
+                name="_error"
+                value="https://goldenchidi.site/error.html"
+              />
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Your Email"
+                />
+                <button type="submit">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </form>
+            <p class="consent-note">
+              By submitting your email, you agree to receive newsletters from
+              us.
+            </p>
+          </div>
+        </div>
+        <span class="footLine"></span>
+        <p class="footer-copy">© 2026 Golden Chidi. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

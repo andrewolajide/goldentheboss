@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Real Estate, Lands" />
+    <meta name="description" content="Real Estate with Golden Chidi" />
+    <title>Training Page</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    /></noscript>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-bar-row">
+          <div class="nav-left">
+            <a href="index.html" class="nav-logo-link">
+              <img src="images/website logo.png" alt="Logo" class="nav-logo" />
+            </a>
+            <a href="index.html" class="nav-title">Golden Chidi</a>
+          </div>
+
+          <div class="nav-right">
+            <a href="/">Home</a>
+            <a href="/listings.html">Properties</a>
+            <a href="/about.html">About</a>
+            <a href="/training.html">Training</a>
+
+            <a href="/contact.html" class="nav-btn"
+              ><button>Contact<i class="fa-solid fa-arrow-right"></i></button
+            ></a>
+          </div>
+
+          <div class="hamburger" onclick="toggleMenu(this)">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <ul class="mobile-menu">
+          <li><a href="pages/listings.html">Properties</a></li>
+          <li><a href="pages/about.html">About</a></li>
+          <li><a href="pages/training.html">Training</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+          <li>
+            <a href="pages/contact.html"
+              >Schedule a Call<i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="trainingPage">
+      <img
+        src="images/trainingbackground.jpg"
+        alt="Training Image"
+        class="trainingPic"
+      />
+      <div class="trainingText">
+        <p class="trainingTile">Licensed Realtor & Team Trainer</p>
+        <div class="trainingHead">
+          <h2 class="a1">Elevate Your</h2>
+          <h2 class="a2">Real Estate Career</h2>
+        </div>
+
+        <p>
+          Transform your real estate practice with proven training programs
+          designed to boost your sales, enhance client relationships, and
+          accelerate your career growth.
+        </p>
+
+        <a href="training.html" class="trainingBtn"
+          ><button>
+            Book Training Session<i class="fa-solid fa-arrow-right"></i></button
+        ></a>
+      </div>
+    </section>
+
+    <section class="trainingPrograms">
+      <h2 class="programHead">Training <span>Programs</span></h2>
+      <p>
+        Choose the training program that best fits your needs and career goals
+      </p>
+      <!-- Program row starts -->
+      <div class="programRow">
+        <div class="programBox">
+          <i class="fa-solid fa-user"></i>
+          <h3>Individual Coaching</h3>
+          <p>
+            One-on-one personalized coaching sessions designed to address your
+            specific challenges and accelerate your growth.
+          </p>
+          <h4>N50,000</h4>
+          <p class="pBoxP">per session</p>
+          <ul>
+            <li>2-hour intensive sessions</li>
+            <li>Customized action plans</li>
+            <li>Follow-up support materials</li>
+            <li>Email support between sessions</li>
+          </ul>
+          <a href="/contact.html#formBackground" class="trainingBtn"
+            ><button>Book Individual Session</button></a
+          >
+        </div>
+        <div class="programBox colorChange">
+          <i class="fa-solid fa-users"></i>
+          <h3>Team Training</h3>
+          <p>
+            Comprehensive training workshops for real estate teams looking to
+            improve collaboration and increase sales.
+          </p>
+          <h4>N150,000</h4>
+          <p class="pBoxP">per team (up to 20 agents)</p>
+          <ul>
+            <li>Full day intensive workshop</li>
+            <li>Team building exercises</li>
+            <li>Sales strategy development</li>
+            <li>90-day follow-up program</li>
+          </ul>
+          <a href="/contact.html?form=team" class="trainingBtn"
+            ><button>Book Team Training</button></a
+          >
+        </div>
+        <div class="programBox">
+          <i class="fa-solid fa-building"></i>
+          <h3>Organization Programs</h3>
+          <p>
+            Enterprise-level training solutions for brokerages and large real
+            estate organizations.
+          </p>
+          <h4>Custom</h4>
+          <p class="pBoxP">pricing available</p>
+          <ul>
+            <li>Multi day training programs</li>
+            <li>Leadership development</li>
+            <li>Systems and process optimization</li>
+            <li>Ongoing support & consulting</li>
+          </ul>
+          <a href="/contact.html?form=team" class="trainingBtn"
+            ><button>Get Custom Quote</button></a
+          >
+        </div>
+      </div>
+      <!-- Program row ends -->
+    </section>
+
+    <section class="trainingTopics">
+      <h2>Training <span>Topics</span></h2>
+      <p>
+        Comprehensive curriculum covering all aspects of successful real estate
+        practice
+      </p>
+      <!-- Topics row start -->
+      <div class="topicsRow">
+        <div class="topicBox">
+          <i class="fa-solid fa-headset"></i>
+          <h3>Client Relationship Management</h3>
+          <p>
+            Build lasting relationships, improve communication skills, and
+            create exceptional client experiences that generate referrals.
+          </p>
+        </div>
+        <div class="topicBox">
+          <i class="fa-solid fa-chart-line"></i>
+          <h3>Sales Strategies & Techniques</h3>
+          <p>
+            Master proven sales methodologies, objection handling, and closing
+            techniques that consistently deliver results.
+          </p>
+        </div>
+        <div class="topicBox">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <h3>Lead Generation & Prospecting</h3>
+          <p>
+            Develop sustainable lead generation systems using both traditional
+            and digital marketing strategies.
+          </p>
+        </div>
+        <div class="topicBox">
+          <i class="fa-regular fa-handshake"></i>
+          <h3>Negotiation Mastery</h3>
+          <p>
+            Learn advanced negotiation tactics to secure better deals for
+            clients while maximizing your commissions.
+          </p>
+        </div>
+        <div class="topicBox">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+          <h3>Digital Narketing & Social Media</h3>
+          <p>
+            Leverage social media, content marketing, and digital tools to build
+            your brand and attract clients online.
+          </p>
+        </div>
+        <div class="topicBox">
+          <i class="fa-regular fa-clock"></i>
+          <h3>Time Management & Productivity</h3>
+          <p>
+            Optimize your schedule, prioritize high-value activities, and create
+            systems for maximum efficiency and work-life balance.
+          </p>
+        </div>
+      </div>
+      <!-- Topics row end -->
+    </section>
+
+    <section class="stories">
+      <h2>Success <span>Stories</span></h2>
+      <p>
+        Real results from agents and teams who transformed their careers through
+        training
+      </p>
+      <!-- Stories row start -->
+      <div class="storiesRow">
+        <div class="storiesBox colorA">
+          <span class="stars"></span>
+          <h3>300% Increase in Sales</h3>
+          <p>
+            "After completing the individual coaching program, I went from
+            closing 2 deals per month to averaging 6 deals per month. The
+            personalized strategies Golden provided completely transformed my
+            approach to real estate."
+          </p>
+          <div class="tag">
+            <div class="initials"><p>AL</p></div>
+            <div class="nameTitle">
+              <h5>Adewale Lawal</h5>
+              <p>Real Estate Agent, Century 21</p>
+            </div>
+          </div>
+        </div>
+        <div class="storiesBox colorB">
+          <span class="stars"></span>
+          <h3>Organization-Wide Transformation</h3>
+          <p>
+            ""Golden's organization program transformed our entire brokerage
+            culture. Agent retention improved by 60%, and our overall
+            productivity increased across all departments. Best investment we've
+            made in years."
+          </p>
+          <div class="tag">
+            <div class="initials"><p>VE</p></div>
+            <div class="nameTitle">
+              <h5>Vincent Enyeama</h5>
+              <p>Broker/Owner, Premier Properties</p>
+            </div>
+          </div>
+        </div>
+        <div class="storiesBox colorC">
+          <span class="stars"></span>
+          <h3>Team Performance Breakthrough</h3>
+          <p>
+            "Our 12-person team was struggling with coordination and sales
+            targets. Golden's team training workshop gave us the tools and
+            mindset we needed. We exceeded our annual goal by 45% in just 8
+            months."
+          </p>
+          <div class="tag">
+            <div class="initials"><p>OI</p></div>
+            <div class="nameTitle">
+              <h5>Obayan Ibusa</h5>
+              <p>Team Leader, Keller Williams</p>
+            </div>
+          </div>
+        </div>
+        <div class="storiesBox colorD">
+          <span class="stars"></span>
+          <h3>From Struggling to Thriving</h3>
+          <p>
+            "I was ready to quit real estate after two years of barely breaking
+            even. Golden's coaching program not only saved my career but helped
+            me become one of the top producers in my market within 18 months."
+          </p>
+          <div class="tag">
+            <div class="initials"><p>EN</p></div>
+            <div class="nameTitle">
+              <h5>Ebube Nwabufoh</h5>
+              <p>Real Estate Agent, RE/MAX</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Stories row end -->
+    </section>
+
+    <section class="faqs">
+      <h2>Frequently Asked <span>Questions</span></h2>
+      <!-- FAQ row start -->
+      <div class="faqRow">
+        <div class="faqBox">
+          <h4>How long do training programs typically take?</h4>
+          <p>
+            Individual coaching sessions are 2 hours each. Team training
+            workshops are full-day intensives (8 hours). Organization programs
+            vary from 2-5 days depending on your needs and goals.
+          </p>
+        </div>
+        <div class="faqBox">
+          <h4>Do you offer virtual training sessions?</h4>
+          <p>
+            Yes, all training programs are available both in-person and
+            virtually via video conference. Virtual sessions are just as
+            effective and allow for flexible scheduling.
+          </p>
+        </div>
+        <div class="faqBox">
+          <h4>What's included in the follow-up support?</h4>
+          <p>
+            All training programs include email support, resource materials,
+            action plan templates, and scheduled check-ins to ensure you're
+            implementing what you've learned successfully.
+          </p>
+        </div>
+        <div class="faqBox">
+          <h4>Can I customize a training program for my specific needs?</h4>
+          <p>
+            Absolutely! All programs can be customized based on your experience
+            level, market conditions, and specific challenges. We'll discuss
+            your goals during the initial consultation.
+          </p>
+        </div>
+      </div>
+      <!-- FAQ row end -->
+    </section>
+
+    <div class="trainingPageClose">
+      <h2>Ready to Transform Your Real Estate Career?</h2>
+      <p>
+        Take the first step towards achieving your goals with proven training
+        programs designed for success
+      </p>
+      <a href="/contact.html#formBackground" class="listCloseBtn"
+        ><button>
+          Book Training Now<i class="fa-solid fa-arrow-right"></i></button
+      ></a>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-columns">
+          <div class="footer-section align-left">
+            <p><span>Chidi Golden</span></p>
+            <p class="leftP">
+              Elevating real estate excellence through expert sales and
+              professional training
+            </p>
+          </div>
+          <div class="footer-section align-center">
+            <p><strong>Quick Links</strong></p>
+            <a href="/">Home</a>
+            <a href="/listings.html">Properties</a>
+            <a href="/about.html">About</a>
+            <a href="/training.html">Training</a>
+            <a href="/contact.html#formBackground">Book Consultaton</a>
+            <a href="/contact.html">Contact</a>
+          </div>
+          <div class="footer-section align-center2">
+            <p><strong>Connect</strong></p>
+            <a
+              href="https://www.instagram.com/listings_bygolden"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a
+              href="https://www.linkedin.com/in/golden-chidi-unaegbu-52b3b5150"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a
+              href="https://youtube.com/@thegoldenchidi"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-youtube"></i> Youtube
+            </a>
+            <a
+              href="https://www.facebook.com/unaegbu.golden"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-facebook"></i> Facebook
+            </a>
+          </div>
+          <div class="footer-section align-right">
+            <p class="mailHead"><strong>Stay Updated</strong></p>
+            <p>Get market insights & training tips</p>
+            <form
+              action="https://formsubmit.co/doxahmedia@gmail.com"
+              method="POST"
+              class="contact-form"
+            >
+              <!-- Honeypot anti-spam field (invisible to humans) -->
+              <input type="text" name="_honey" style="display: none" />
+
+              <!-- Redirect on success -->
+              <input
+                type="hidden"
+                name="_next"
+                value="https://goldenchidi.site/thank-you.html"
+              />
+
+              <!-- Redirect on error -->
+              <input
+                type="hidden"
+                name="_error"
+                value="https://goldenchidi.site/error.html"
+              />
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Your Email"
+                />
+                <button type="submit">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </form>
+            <p class="consent-note">
+              By submitting your email, you agree to receive newsletters from
+              us.
+            </p>
+          </div>
+        </div>
+        <span class="footLine"></span>
+        <p class="footer-copy">© 2026 Golden Chidi. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
