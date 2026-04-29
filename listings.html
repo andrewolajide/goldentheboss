@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="Real Estate, Lands" />
     <meta name="description" content="Real Estate with Golden Chidi" />
-    <title>Listings</title>
+    <title>Golden Chidi</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.png" />
     <link rel="icon" type="image/x-icon" href="images/favicon.png" />
@@ -14,6 +14,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
 
@@ -35,7 +40,7 @@
   <body>
     <nav class="navbar">
       <div class="container">
-        <div class="nav-bar-row listingNav">
+        <div class="nav-bar-row other-nav">
           <div class="nav-left">
             <a href="index.html" class="nav-logo-link">
               <img src="images/website logo.png" alt="Logo" class="nav-logo" />
@@ -45,13 +50,13 @@
 
           <div class="nav-right">
             <a href="index.html">Home</a>
-            <a href="listings.html">Properties</a>
             <a href="about.html">About</a>
+            <a href="listings.html">Listings</a>
             <a href="training.html">Training</a>
 
-            <a href="contact.html" class="nav-btn"
-              ><button>Contact<i class="fa-solid fa-arrow-right"></i></button
-            ></a>
+            <a href="contact.html" class="nav-btn btn"
+              >Contact<i class="ri-contacts-book-3-line"></i>
+            </a>
           </div>
 
           <div class="hamburger" onclick="toggleMenu(this)">
@@ -61,14 +66,14 @@
           </div>
         </div>
         <ul class="mobile-menu">
-          <li><a href="listings.html">Properties</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="listings.html">Listings</a></li>
           <li><a href="training.html">Training</a></li>
-          <li><a href="contact.html">Contact</a></li>
           <li>
-            <a href="contact.html"
-              >Schedule a Call<i class="fa-solid fa-arrow-right"></i
-            ></a>
+            <a href="contact.html" class="nav-btn btn"
+              >Contact<i class="ri-contacts-book-3-line"></i>
+            </a>
           </li>
         </ul>
       </div>
@@ -82,199 +87,82 @@
       </p>
     </div>
 
-    <div class="filterTabs">
-      <button class="filterBtn active" data-category="all">
-        All Properties
-      </button>
-      <button class="filterBtn" data-category="for-sale">For Sale</button>
-      <button class="filterBtn" data-category="for-rent">For Rent</button>
-      <button class="filterBtn" data-category="commercial">Commercial</button>
-      <button class="filterBtn" data-category="residential">Residential</button>
+    <div class="listings-search-container">
+      <div class="search-main">
+        <div class="search-item">
+          <label><i class="ri-layout-3-line"></i>Property Type</label>
+          <select id="search-type">
+            <option value="">All Properties</option>
+            <option value="detachedDuplex">Detached Duplex</option>
+            <option value="semiDetachedDuplex">Semi Detached Duplex</option>
+            <option value="terraceDuplex">Terrace Duplex</option>
+            <option value="bungalow">Bungalow</option>
+            <option value="apartment">Apartment</option>
+            <option value="land">Land</option>
+          </select>
+        </div>
+
+        <div class="search-item">
+          <label><i class="ri-map-pin-line"></i>Location</label>
+          <select id="search-location">
+            <option value="">All Locations</option>
+          </select>
+        </div>
+
+        <div class="search-item">
+          <label><i class="ri-menu-search-line"></i>Category</label>
+          <select id="search-category">
+            <option value="">All Categories</option>
+            <option value="residential">For Sale</option>
+            <option value="commercial">For Rent</option>
+          </select>
+        </div>
+
+        <div class="search-item">
+          <label><i class="ri-hotel-bed-line"></i>Bedrooms</label>
+          <select id="search-bed">
+            <option value="">Any Size</option>
+            <option value="1-bed">1 Bedroom</option>
+            <option value="2-bed">2 Bedroom</option>
+            <option value="3-bed">3 Bedroom</option>
+            <option value="4-bed">4 Bedroom</option>
+            <option value="5-bed">5 Bedroom</option>
+            <option value="6-plus">6+ Bedroom</option>
+          </select>
+        </div>
+
+        <div class="search-item">
+          <label><i class="ri-money-dollar-circle-line"></i>Budget</label>
+          <select id="search-budget">
+            <option value="">Any Budget</option>
+            <option value="50m">Under ₦50M</option>
+            <option value="100m">₦50M - ₦100M</option>
+            <option value="500m">₦100M - ₦500M</option>
+            <option value="500m+">₦500M+</option>
+          </select>
+        </div>
+
+        <div class="search-buttons">
+          <button class="search-btn" onclick="runListingsFilter()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Search</span>
+          </button>
+
+          <button class="reset-btn" onclick="resetFilters()">
+            <i class="fa-solid fa-rotate-right"></i>
+            <span>Reset</span>
+          </button>
+        </div>
+      </div>
     </div>
 
     <div class="ppline"></div>
 
-    <section class="propertyGrid">
-      <div class="propertyRow">
-        <div class="smallImgBox" data-category="for-sale residential">
-          <div class="profile-pic">
-            <img
-              src="images/listingB.jpg"
-              alt="Profile Picture"
-              class="smallListImg"
-            />
-          </div>
-          <div class="smallImgText">
-            <h4>Contemporary Family Home</h4>
-            <p>Abraham Adesanya, Lagos</p>
-            <h4>N300,000,000</h4>
-            <p>
-              4 bed <span class="dot"></span> 4 bath
-              <span class="dot"></span> 3,250sqft
-            </p>
-            <a href="property1.html"><button>View Details</button></a>
-          </div>
-        </div>
-
-        <div class="smallImgBox" data-category="for-sale commercial">
-          <div class="profile-pic">
-            <img
-              src="images/listingB.jpg"
-              alt="Profile Picture"
-              class="smallListImg"
-            />
-          </div>
-          <div class="smallImgText">
-            <h4>Contemporary Family Home</h4>
-            <p>Abraham Adesanya, Lagos</p>
-            <h4>N300,000,000</h4>
-            <p>
-              4 bed <span class="dot"></span> 4 bath
-              <span class="dot"></span> 3,250sqft
-            </p>
-            <a href="property1.html"><button>View Details</button></a>
-          </div>
-        </div>
-        <div class="smallImgBox" data-category="for-rent residential">
-          <div class="profile-pic">
-            <img
-              src="images/listingB.jpg"
-              alt="Profile Picture"
-              class="smallListImg"
-            />
-          </div>
-          <div class="smallImgText">
-            <h4>Contemporary Family Home</h4>
-            <p>Abraham Adesanya, Lagos</p>
-            <h4>N300,000,000</h4>
-            <p>
-              4 bed <span class="dot"></span> 4 bath
-              <span class="dot"></span> 3,250sqft
-            </p>
-            <a href="property1.html"><button>View Details</button></a>
-          </div>
-        </div>
+    <section class="property-section">
+      <div class="filter-count" id="filterCount" style="display: none">
+        Showing 0 Properties
       </div>
-      <div class="propertyRow">
-        <div class="smallImgBox" data-category="for-sale residential">
-          <div class="profile-pic">
-            <img
-              src="images/listingB.jpg"
-              alt="Profile Picture"
-              class="smallListImg"
-            />
-          </div>
-          <div class="smallImgText">
-            <h4>Contemporary Family Home</h4>
-            <p>Abraham Adesanya, Lagos</p>
-            <h4>N300,000,000</h4>
-            <p>
-              4 bed <span class="dot"></span> 4 bath
-              <span class="dot"></span> 3,250sqft
-            </p>
-            <a href="property1.html"><button>View Details</button></a>
-          </div>
-        </div>
-
-        <div class="smallImgBox" data-category="commercial">
-          <div class="profile-pic">
-            <img
-              src="images/listingB.jpg"
-              alt="Profile Picture"
-              class="smallListImg"
-            />
-          </div>
-          <div class="smallImgText">
-            <h4>Contemporary Family Home</h4>
-            <p>Abraham Adesanya, Lagos</p>
-            <h4>N300,000,000</h4>
-            <p>
-              4 bed <span class="dot"></span> 4 bath
-              <span class="dot"></span> 3,250sqft
-            </p>
-            <a href="property1.html"><button>View Details</button></a>
-          </div>
-        </div>
-        <div class="smallImgBox" data-category="for-rent commercial">
-          <div class="profile-pic">
-            <img
-              src="images/listingB.jpg"
-              alt="Profile Picture"
-              class="smallListImg"
-            />
-          </div>
-          <div class="smallImgText">
-            <h4>Contemporary Family Home</h4>
-            <p>Abraham Adesanya, Lagos</p>
-            <h4>N300,000,000</h4>
-            <p>
-              4 bed <span class="dot"></span> 4 bath
-              <span class="dot"></span> 3,250sqft
-            </p>
-            <a href="property1.html"><button>View Details</button></a>
-          </div>
-        </div>
-      </div>
-      <div class="propertyRow">
-        <div class="smallImgBox" data-category="for-sale commercial">
-          <div class="profile-pic">
-            <img
-              src="images/listingB.jpg"
-              alt="Profile Picture"
-              class="smallListImg"
-            />
-          </div>
-          <div class="smallImgText">
-            <h4>Contemporary Family Home</h4>
-            <p>Abraham Adesanya, Lagos</p>
-            <h4>N300,000,000</h4>
-            <p>
-              4 bed <span class="dot"></span> 4 bath
-              <span class="dot"></span> 3,250sqft
-            </p>
-            <a href="property1.html"><button>View Details</button></a>
-          </div>
-        </div>
-
-        <div class="smallImgBox" data-category="commercial">
-          <div class="profile-pic">
-            <img
-              src="images/listingB.jpg"
-              alt="Profile Picture"
-              class="smallListImg"
-            />
-          </div>
-          <div class="smallImgText">
-            <h4>Contemporary Family Home</h4>
-            <p>Abraham Adesanya, Lagos</p>
-            <h4>N300,000,000</h4>
-            <p>
-              4 bed <span class="dot"></span> 4 bath
-              <span class="dot"></span> 3,250sqft
-            </p>
-            <a href="property1.html"><button>View Details</button></a>
-          </div>
-        </div>
-        <div class="smallImgBox" data-category="for-sale residential">
-          <div class="profile-pic">
-            <img
-              src="images/listingB.jpg"
-              alt="Profile Picture"
-              class="smallListImg"
-            />
-          </div>
-          <div class="smallImgText">
-            <h4>Contemporary Family Home</h4>
-            <p>Abraham Adesanya, Lagos</p>
-            <h4>N300,000,000</h4>
-            <p>
-              4 bed <span class="dot"></span> 4 bath
-              <span class="dot"></span> 3,250sqft
-            </p>
-            <a href="property1.html"><button>View Details</button></a>
-          </div>
-        </div>
-      </div>
+      <div class="propertyGrid" id="listingsGrid"></div>
     </section>
 
     <div class="propertyPageClose">
@@ -288,6 +176,7 @@
           Schedule a Consultation<i class="fa-solid fa-arrow-right"></i></button
       ></a>
     </div>
+
     <footer class="site-footer">
       <div class="footer-content">
         <div class="footer-columns">
@@ -299,69 +188,27 @@
             </p>
           </div>
           <div class="footer-section align-center">
-            <p><strong>Quick Links</strong></p>
-            <a href="index.html">Home</a>
-            <a href="listings.html">Properties</a>
-            <a href="about.html">About</a>
-            <a href="training.html">Training</a>
-            <a href="contact.html#formBackground">Book Consultaton</a>
-            <a href="contact.html">Contact</a>
-          </div>
-          <div class="footer-section align-center2">
-            <p><strong>Connect</strong></p>
-            <a
-              href="https://www.instagram.com/listings_bygolden"
-              target="_blank"
-              rel="noopener"
-            >
-              <i class="fab fa-instagram"></i> Instagram
-            </a>
-            <a
-              href="https://www.linkedin.com/in/golden-chidi-unaegbu-52b3b5150"
-              target="_blank"
-              rel="noopener"
-            >
-              <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a
-              href="https://youtube.com/@thegoldenchidi"
-              target="_blank"
-              rel="noopener"
-            >
-              <i class="fab fa-youtube"></i> Youtube
-            </a>
-            <a
-              href="https://www.facebook.com/unaegbu.golden"
-              target="_blank"
-              rel="noopener"
-            >
-              <i class="fab fa-facebook"></i> Facebook
-            </a>
+            <div class="align-center1">
+              <p><strong>Quick Links</strong></p>
+              <a href="index.html">Home</a>
+              <a href="listings.html">Properties</a>
+              <a href="about.html">About</a>
+              <a href="training.html">Training</a>
+              <a href="contact.html#formBackground">Book Consultaton</a>
+              <a href="contact.html">Contact</a>
+            </div>
+            <div class="align-center2">
+              <p><strong>Connect</strong></p>
+              <a href=""> <i class="fab fa-instagram"></i> Instagram </a>
+              <a href=""> <i class="fab fa-linkedin"></i> LinkedIn </a>
+              <a href=""> <i class="fab fa-youtube"></i> Youtube </a>
+              <a href=""> <i class="fab fa-facebook"></i> Facebook </a>
+            </div>
           </div>
           <div class="footer-section align-right">
             <p class="mailHead"><strong>Stay Updated</strong></p>
             <p>Get market insights & training tips</p>
-            <form
-              action="https://formsubmit.co/doxahmedia@gmail.com"
-              method="POST"
-              class="contact-form"
-            >
-              <!-- Honeypot anti-spam field (invisible to humans) -->
-              <input type="text" name="_honey" style="display: none" />
-
-              <!-- Redirect on success -->
-              <input
-                type="hidden"
-                name="_next"
-                value="https://goldenchidi.site/thank-you.html"
-              />
-
-              <!-- Redirect on error -->
-              <input
-                type="hidden"
-                name="_error"
-                value="https://goldenchidi.site/error.html"
-              />
+            <form>
               <div class="form-group">
                 <input
                   type="email"
@@ -385,6 +232,10 @@
         <p class="footer-copy">© 2026 Golden Chidi. All rights reserved.</p>
       </div>
     </footer>
+    <button id="scrollTopBtn" class="action-btn">
+      <i class="ri-arrow-up-s-line"></i>
+    </button>
+    <script src="properties.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

@@ -18,6 +18,11 @@
     />
 
     <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link
       rel="preload"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       as="style"
@@ -45,13 +50,13 @@
 
           <div class="nav-right">
             <a href="index.html">Home</a>
-            <a href="listings.html">Properties</a>
             <a href="about.html">About</a>
+            <a href="listings.html">Listings</a>
             <a href="training.html">Training</a>
 
-            <a href="contact.html" class="nav-btn"
-              ><button>Contact<i class="fa-solid fa-arrow-right"></i></button
-            ></a>
+            <a href="contact.html" class="nav-btn btn"
+              >Contact<i class="ri-contacts-book-3-line"></i>
+            </a>
           </div>
 
           <div class="hamburger" onclick="toggleMenu(this)">
@@ -61,14 +66,14 @@
           </div>
         </div>
         <ul class="mobile-menu">
-          <li><a href="listings.html">Properties</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="listings.html">Listings</a></li>
           <li><a href="training.html">Training</a></li>
-          <li><a href="contact.html">Contact</a></li>
           <li>
-            <a href="contact.html"
-              >Schedule a Call<i class="fa-solid fa-arrow-right"></i
-            ></a>
+            <a href="contact.html" class="nav-btn btn"
+              >Contact<i class="ri-contacts-book-3-line"></i>
+            </a>
           </li>
         </ul>
       </div>
@@ -90,8 +95,9 @@
       <div class="heroText">
         <p class="hero1Tile">Licensed Realtor & Team Trainer</p>
         <div class="heroHead">
-          <h1>Elevating Real Estate</h1>
-          <h2>Excellence & Expertise</h2>
+          <h1>
+            Elevating Real Estate <br /><span>Excellence & Expertise</span>
+          </h1>
         </div>
 
         <p>
@@ -100,32 +106,31 @@
           mentorship
         </p>
         <div class="heroBtnRow">
-          <a href="contact.html#formBackground" class="consultBtn"
-            ><button>
-              Schedule Consultation<i
-                class="fa-solid fa-arrow-right"
-              ></i></button
+          <a href="contact.html#formBackground" class="consultBtn btn">
+            Schedule Consultation<i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="listings.html" class="btn"
+            >View Properties<i class="ri-home-3-line"></i
           ></a>
-          <a href="listings.html"><button>View Properties</button></a>
         </div>
       </div>
     </section>
 
     <section class="pedigree fade-to-white">
       <div class="pedigreeInfo">
-        <h3>50+</h3>
+        <h3><span class="counter" data-target="50">0</span>+</h3>
         <p>Properties Sold</p>
       </div>
       <div class="pedigreeInfo">
-        <h3>98%</h3>
+        <h3><span class="counter" data-target="98">0</span>%</h3>
         <p>Client Satisfaction</p>
       </div>
       <div class="pedigreeInfo">
-        <h3>15+</h3>
+        <h3><span class="counter" data-target="15">0</span>+</h3>
         <p>Training Sessions</p>
       </div>
       <div class="pedigreeInfo">
-        <h3>7+</h3>
+        <h3><span class="counter" data-target="7">0</span>+</h3>
         <p>Years Experience</p>
       </div>
     </section>
@@ -142,21 +147,24 @@
         <div class="largeImg">
           <div class="profile-pic">
             <img
-              src="images/listingA.jpg"
+              src="images/listing1.jpg"
               alt="Profile Picture"
               class="largeListImg"
             />
           </div>
           <div class="largeimgtext">
             <p class="listTile">New Listing</p>
-            <h3>Modern Luxury Estate</h3>
-            <p>Chevron Estate, Island</p>
-            <h3>N850,000</h3>
-            <p>
-              5 bed <span class="dot"></span> 6 bath
-              <span class="dot"></span> 6,200sqft
+            <h3>Modern Townhouse</h3>
+            <p class="location">
+              <i class="ri-map-pin-line"></i>Abraham Adesanya, Lagos
             </p>
-            <a href="property1.html"><button>View Details</button></a>
+            <h3>₦300,000,000</h3>
+            <div class="features">
+              <p><i class="ri-hotel-bed-line"></i>5 bed</p>
+              <p><i class="ri-bath-line"></i>6 bath</p>
+              <p><i class="ri-ruler-line"></i>2,100sqft</p>
+            </div>
+            <a href="property1.html" class="btn">View Details</a>
           </div>
         </div>
         <div class="smallImg">
@@ -164,39 +172,45 @@
             <div class="smallImgBox">
               <div class="profile-pic">
                 <img
-                  src="images/listingB.jpg"
+                  src="images/listing2.jpg"
                   alt="Profile Picture"
                   class="smallListImg"
                 />
               </div>
               <div class="smallImgText">
-                <h4>Contemporary Family Home</h4>
-                <p>Abraham Adesanya, Lagos</p>
-                <h4>N300,000,000</h4>
-                <p>
-                  4 bed <span class="dot"></span> 4 bath
-                  <span class="dot"></span> 3,250sqft
+                <h4>Spanish Colonial Estate</h4>
+                <p class="location">
+                  <i class="ri-map-pin-line"></i>Ikeja, Lagos
                 </p>
-                <a href="property1.html"><button>View Details</button></a>
+                <h4>₦500,000,000</h4>
+                <div class="features">
+                  <p><i class="ri-hotel-bed-line"></i>7 bed</p>
+                  <p><i class="ri-bath-line"></i>7 bath</p>
+                  <p><i class="ri-ruler-line"></i>3,200sqft</p>
+                </div>
+                <a href="property1.html" class="btn">View Details</a>
               </div>
             </div>
             <div class="smallImgBox">
               <div class="profile-pic">
                 <img
-                  src="images/listingB.jpg"
+                  src="images/listing3.jpg"
                   alt="Profile Picture"
                   class="smallListImg"
                 />
               </div>
               <div class="smallImgText">
-                <h4>Contemporary Family Home</h4>
-                <p>Abraham Adesanya, Lagos</p>
-                <h4>N300,000,000</h4>
-                <p>
-                  4 bed <span class="dot"></span> 4 bath
-                  <span class="dot"></span> 3,250sqft
+                <h4>Waterfront Penthouse</h4>
+                <p class="location">
+                  <i class="ri-map-pin-line"></i>Ikoyi, Lagos
                 </p>
-                <a href="property1.html"><button>View Details</button></a>
+                <h4>₦380,000,000</h4>
+                <div class="features">
+                  <p><i class="ri-hotel-bed-line"></i>4 bed</p>
+                  <p><i class="ri-bath-line"></i>4 bath</p>
+                  <p><i class="ri-ruler-line"></i>2,500sqft</p>
+                </div>
+                <a href="property1.html" class="btn">View Details</a>
               </div>
             </div>
           </div>
@@ -204,39 +218,43 @@
             <div class="smallImgBox">
               <div class="profile-pic">
                 <img
-                  src="images/listingB.jpg"
+                  src="images/listing4.jpg"
                   alt="Profile Picture"
                   class="smallListImg"
                 />
               </div>
               <div class="smallImgText">
-                <h4>Contemporary Family Home</h4>
-                <p>Abraham Adesanya, Lagos</p>
-                <h4>N300,000,000</h4>
-                <p>
-                  4 bed <span class="dot"></span> 4 bath
-                  <span class="dot"></span> 3,250sqft
+                <h4>Modern Luxury Estate</h4>
+                <p class="location">
+                  <i class="ri-map-pin-line"></i>Chevron Estate, Lagos
                 </p>
-                <a href="property1.html"><button>View Details</button></a>
+                <h4>₦35,000,000</h4>
+                <div class="features">
+                  <p><i class="ri-hotel-bed-line"></i>6 bed</p>
+                  <p><i class="ri-bath-line"></i>6 bath</p>
+                  <p><i class="ri-ruler-line"></i>4,200sqft</p>
+                </div>
+                <a href="property1.html" class="btn">View Details</a>
               </div>
             </div>
             <div class="smallImgBox">
               <div class="profile-pic">
                 <img
-                  src="images/listingB.jpg"
+                  src="images/land-listing.jpg"
                   alt="Profile Picture"
                   class="smallListImg"
                 />
               </div>
               <div class="smallImgText">
-                <h4>Contemporary Family Home</h4>
-                <p>Abraham Adesanya, Lagos</p>
-                <h4>N300,000,000</h4>
-                <p>
-                  4 bed <span class="dot"></span> 4 bath
-                  <span class="dot"></span> 3,250sqft
+                <h4>Luxury Landed Property</h4>
+                <p class="location">
+                  <i class="ri-map-pin-line"></i>Ibeju Lekki, Lagos
                 </p>
-                <a href="property1.html"><button>View Details</button></a>
+                <h4>₦45,000,000</h4>
+                <div class="features">
+                  <p><i class="ri-ruler-line"></i>12,000sqft</p>
+                </div>
+                <a href="property1.html" class="btn">View Details</a>
               </div>
             </div>
           </div>
@@ -267,7 +285,7 @@
           ></a>
         </div>
 
-        <div class="aboutImages">
+        <div class="aboutImages scale-item">
           <img
             src="images/profile.jpg"
             alt="Profile Picture"
@@ -289,11 +307,11 @@
         excel in today's competitive market
       </p>
       <div class="grid">
-        <div class="gridImage">
+        <div class="gridImage scale-item">
           <img
             src="images/training.jpg"
             alt="Training Picture"
-            class="indiCoach"
+            class="grid-img"
           />
           <div class="gridOverlay">
             <i class="fa-solid fa-user"></i>
@@ -309,7 +327,7 @@
           </div>
         </div>
         <div class="gridBoxStack">
-          <div class="gridBox top">
+          <div class="gridBox top scale-item">
             <i class="fa-solid fa-users"></i>
             <h3>Team Training Workshops</h3>
             <p>
@@ -321,7 +339,7 @@
               >Learn more<i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
-          <div class="gridBox bottom">
+          <div class="gridBox bottom scale-item">
             <i class="fa-solid fa-building"></i>
             <h3>Organization Programs</h3>
             <p>
@@ -399,7 +417,7 @@
       <img
         src="images/training.jpg"
         alt="Training Picture"
-        class="contactImage"
+        class="contactImage scale-item"
       />
       <h2>
         <span>Ready to</span> elevate <span>your real estate journey?</span>
@@ -421,69 +439,27 @@
             </p>
           </div>
           <div class="footer-section align-center">
-            <p><strong>Quick Links</strong></p>
-            <a href="index.html">Home</a>
-            <a href="listings.html">Properties</a>
-            <a href="about.html">About</a>
-            <a href="training.html">Training</a>
-            <a href="contact.html#formBackground">Book Consultaton</a>
-            <a href="contact.html">Contact</a>
-          </div>
-          <div class="footer-section align-center2">
-            <p><strong>Connect</strong></p>
-            <a
-              href="https://www.instagram.com/listings_bygolden"
-              target="_blank"
-              rel="noopener"
-            >
-              <i class="fab fa-instagram"></i> Instagram
-            </a>
-            <a
-              href="https://www.linkedin.com/in/golden-chidi-unaegbu-52b3b5150"
-              target="_blank"
-              rel="noopener"
-            >
-              <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a
-              href="https://youtube.com/@thegoldenchidi"
-              target="_blank"
-              rel="noopener"
-            >
-              <i class="fab fa-youtube"></i> Youtube
-            </a>
-            <a
-              href="https://www.facebook.com/unaegbu.golden"
-              target="_blank"
-              rel="noopener"
-            >
-              <i class="fab fa-facebook"></i> Facebook
-            </a>
+            <div class="align-center1">
+              <p><strong>Quick Links</strong></p>
+              <a href="index.html">Home</a>
+              <a href="listings.html">Properties</a>
+              <a href="about.html">About</a>
+              <a href="training.html">Training</a>
+              <a href="contact.html#formBackground">Book Consultaton</a>
+              <a href="contact.html">Contact</a>
+            </div>
+            <div class="align-center2">
+              <p><strong>Connect</strong></p>
+              <a href=""> <i class="fab fa-instagram"></i> Instagram </a>
+              <a href=""> <i class="fab fa-linkedin"></i> LinkedIn </a>
+              <a href=""> <i class="fab fa-youtube"></i> Youtube </a>
+              <a href=""> <i class="fab fa-facebook"></i> Facebook </a>
+            </div>
           </div>
           <div class="footer-section align-right">
             <p class="mailHead"><strong>Stay Updated</strong></p>
             <p>Get market insights & training tips</p>
-            <form
-              action="https://formsubmit.co/doxahmedia@gmail.com"
-              method="POST"
-              class="contact-form"
-            >
-              <!-- Honeypot anti-spam field (invisible to humans) -->
-              <input type="text" name="_honey" style="display: none" />
-
-              <!-- Redirect on success -->
-              <input
-                type="hidden"
-                name="_next"
-                value="https://goldenchidi.site/thank-you.html"
-              />
-
-              <!-- Redirect on error -->
-              <input
-                type="hidden"
-                name="_error"
-                value="https://goldenchidi.site/error.html"
-              />
+            <form>
               <div class="form-group">
                 <input
                   type="email"
@@ -507,6 +483,9 @@
         <p class="footer-copy">© 2026 Golden Chidi. All rights reserved.</p>
       </div>
     </footer>
+    <button id="scrollTopBtn" class="action-btn">
+      <i class="ri-arrow-up-s-line"></i>
+    </button>
     <script src="script.js"></script>
   </body>
 </html>

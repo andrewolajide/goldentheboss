@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="Real Estate, Lands" />
     <meta name="description" content="Real Estate with Golden Chidi" />
-    <title>Listings</title>
+    <title>Golden Chidi</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.png" />
     <link rel="icon" type="image/x-icon" href="images/favicon.png" />
@@ -14,6 +14,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
 
@@ -35,7 +40,7 @@
   <body>
     <nav class="navbar">
       <div class="container">
-        <div class="nav-bar-row listingNav">
+        <div class="nav-bar-row other-nav">
           <div class="nav-left">
             <a href="index.html" class="nav-logo-link">
               <img src="images/website logo.png" alt="Logo" class="nav-logo" />
@@ -45,13 +50,13 @@
 
           <div class="nav-right">
             <a href="index.html">Home</a>
-            <a href="listings.html">Properties</a>
             <a href="about.html">About</a>
+            <a href="listings.html">Listings</a>
             <a href="training.html">Training</a>
 
-            <a href="contact.html" class="nav-btn"
-              ><button>Contact<i class="fa-solid fa-arrow-right"></i></button
-            ></a>
+            <a href="contact.html" class="nav-btn btn"
+              >Contact<i class="ri-contacts-book-3-line"></i>
+            </a>
           </div>
 
           <div class="hamburger" onclick="toggleMenu(this)">
@@ -61,14 +66,14 @@
           </div>
         </div>
         <ul class="mobile-menu">
-          <li><a href="listings.html">Properties</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="listings.html">Listings</a></li>
           <li><a href="training.html">Training</a></li>
-          <li><a href="contact.html">Contact</a></li>
           <li>
-            <a href="contact.html"
-              >Schedule a Call<i class="fa-solid fa-arrow-right"></i
-            ></a>
+            <a href="contact.html" class="nav-btn btn"
+              >Contact<i class="ri-contacts-book-3-line"></i>
+            </a>
           </li>
         </ul>
       </div>
@@ -81,28 +86,32 @@
     </div>
 
     <section class="propertyDetails">
-      <div class="photoGrid">
-        <div class="mainPhoto">
-          <div class="mainTiles">
-            <p class="mainTile sold">Sold</p>
-            <p class="mainTile">Family Home</p>
-          </div>
-
-          <img src="images/main.jpg" alt="Main Property Photo" />
-        </div>
-        <div class="sidePhotos">
-          <img src="images/side1.jpg" alt="Side Property Photo 1" />
-          <img src="images/side2.jpg" alt="Side Property Photo 2" />
-          <img src="images/side3.jpg" alt="Side Property Photo 3" />
+      <div class="property-gallery">
+        <div class="gallery-container">
+          <div class="gallery-main" id="galleryMain"></div>
+          <div class="gallery-grid-wrapper" id="galleryGrid"></div>
         </div>
       </div>
+
+      <div id="photoModal" class="photo-modal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-counter">
+          <span id="currentNum">1</span> / <span id="totalNum">1</span>
+        </div>
+        <div class="modal-content">
+          <div class="modal-slides" id="modalSlides"></div>
+          <button class="modal-prev">&#10094;</button>
+          <button class="modal-next">&#10095;</button>
+        </div>
+      </div>
+
       <div class="body">
         <div class="bodyInfo">
           <h2>Contemporary Family Home</h2>
           <p class="location">
             <i class="fa-solid fa-location-dot"></i>Abraham Adesanya, Lagos
           </p>
-          <p class="price">N300,000,000</p>
+          <p class="price">₦300,000,000</p>
           <!-- Feature tiles start -->
           <div class="featureTiles">
             <div class="featureBox">
@@ -142,18 +151,20 @@
             <h3>Property Features</h3>
             <div class="descriptionList">
               <ol>
-                <li>Open concept floor plan</li>
-                <li>Master suit with walk-in closet</li>
-                <li>Central air conditioning</li>
-                <li>Two car attached garage</li>
-                <li>Walking distance to beach</li>
+                <li><i class="ri-check-line"></i>Open concept floor plan</li>
+                <li>
+                  <i class="ri-check-line"></i>Master suit with walk-in closet
+                </li>
+                <li><i class="ri-check-line"></i>Central air conditioning</li>
+                <li><i class="ri-check-line"></i>Two car attached garage</li>
+                <li><i class="ri-check-line"></i>Walking distance to beach</li>
               </ol>
               <ol>
-                <li>Updated gourmet kitchen</li>
-                <li>Hardwood floors throughout</li>
-                <li>Landscaped backyard</li>
-                <li>Close top rated schools</li>
-                <li>Smart thermostat</li>
+                <li><i class="ri-check-line"></i>Updated gourmet kitchen</li>
+                <li><i class="ri-check-line"></i>Hardwood floors throughout</li>
+                <li><i class="ri-check-line"></i>Landscaped backyard</li>
+                <li><i class="ri-check-line"></i>Close top rated schools</li>
+                <li><i class="ri-check-line"></i>Smart thermostat</li>
               </ol>
             </div>
           </div>
@@ -161,27 +172,7 @@
         </div>
         <div class="formwrapper">
           <h3>Interested in this property?</h3>
-          <form
-            action="https://formsubmit.co/doxahmedia@gmail.com"
-            method="POST"
-            class="contact-form"
-          >
-            <!-- Honeypot anti-spam field (invisible to humans) -->
-            <input type="text" name="_honey" style="display: none" />
-
-            <!-- Redirect on success -->
-            <input
-              type="hidden"
-              name="_next"
-              value="https://goldenchidi.site/thank-you.html"
-            />
-
-            <!-- Redirect on error -->
-            <input
-              type="hidden"
-              name="_error"
-              value="https://goldenchidi.site/error.html"
-            />
+          <form class="contact-form">
             <div class="formRow">
               <div class="form-group">
                 <label for="name">Full Name*</label>
@@ -252,6 +243,7 @@
         </div>
       </div>
     </section>
+
     <footer class="site-footer">
       <div class="footer-content">
         <div class="footer-columns">
@@ -263,69 +255,27 @@
             </p>
           </div>
           <div class="footer-section align-center">
-            <p><strong>Quick Links</strong></p>
-            <a href="index.html">Home</a>
-            <a href="listings.html">Properties</a>
-            <a href="about.html">About</a>
-            <a href="training.html">Training</a>
-            <a href="contact.html#formBackground">Book Consultaton</a>
-            <a href="contact.html">Contact</a>
-          </div>
-          <div class="footer-section align-center2">
-            <p><strong>Connect</strong></p>
-            <a
-              href="https://www.instagram.com/listings_bygolden"
-              target="_blank"
-              rel="noopener"
-            >
-              <i class="fab fa-instagram"></i> Instagram
-            </a>
-            <a
-              href="https://www.linkedin.com/in/golden-chidi-unaegbu-52b3b5150"
-              target="_blank"
-              rel="noopener"
-            >
-              <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a
-              href="https://youtube.com/@thegoldenchidi"
-              target="_blank"
-              rel="noopener"
-            >
-              <i class="fab fa-youtube"></i> Youtube
-            </a>
-            <a
-              href="https://www.facebook.com/unaegbu.golden"
-              target="_blank"
-              rel="noopener"
-            >
-              <i class="fab fa-facebook"></i> Facebook
-            </a>
+            <div class="align-center1">
+              <p><strong>Quick Links</strong></p>
+              <a href="index.html">Home</a>
+              <a href="listings.html">Properties</a>
+              <a href="about.html">About</a>
+              <a href="training.html">Training</a>
+              <a href="contact.html#formBackground">Book Consultaton</a>
+              <a href="contact.html">Contact</a>
+            </div>
+            <div class="align-center2">
+              <p><strong>Connect</strong></p>
+              <a href=""> <i class="fab fa-instagram"></i> Instagram </a>
+              <a href=""> <i class="fab fa-linkedin"></i> LinkedIn </a>
+              <a href=""> <i class="fab fa-youtube"></i> Youtube </a>
+              <a href=""> <i class="fab fa-facebook"></i> Facebook </a>
+            </div>
           </div>
           <div class="footer-section align-right">
             <p class="mailHead"><strong>Stay Updated</strong></p>
             <p>Get market insights & training tips</p>
-            <form
-              action="https://formsubmit.co/doxahmedia@gmail.com"
-              method="POST"
-              class="contact-form"
-            >
-              <!-- Honeypot anti-spam field (invisible to humans) -->
-              <input type="text" name="_honey" style="display: none" />
-
-              <!-- Redirect on success -->
-              <input
-                type="hidden"
-                name="_next"
-                value="https://goldenchidi.site/thank-you.html"
-              />
-
-              <!-- Redirect on error -->
-              <input
-                type="hidden"
-                name="_error"
-                value="https://goldenchidi.site/error.html"
-              />
+            <form>
               <div class="form-group">
                 <input
                   type="email"
@@ -349,6 +299,9 @@
         <p class="footer-copy">© 2026 Golden Chidi. All rights reserved.</p>
       </div>
     </footer>
+    <button id="scrollTopBtn" class="action-btn">
+      <i class="ri-arrow-up-s-line"></i>
+    </button>
     <script src="script.js"></script>
   </body>
 </html>

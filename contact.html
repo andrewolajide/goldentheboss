@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="Real Estate, Lands" />
     <meta name="description" content="Real Estate with Golden Chidi" />
-    <title>Contact</title>
+    <title>Golden Chidi</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.png" />
     <link rel="icon" type="image/x-icon" href="images/favicon.png" />
@@ -14,6 +14,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
 
@@ -35,7 +40,7 @@
   <body>
     <nav class="navbar">
       <div class="container">
-        <div class="nav-bar-row listingNav">
+        <div class="nav-bar-row other-nav">
           <div class="nav-left">
             <a href="index.html" class="nav-logo-link">
               <img src="images/website logo.png" alt="Logo" class="nav-logo" />
@@ -45,13 +50,13 @@
 
           <div class="nav-right">
             <a href="index.html">Home</a>
-            <a href="listings.html">Properties</a>
             <a href="about.html">About</a>
+            <a href="listings.html">Listings</a>
             <a href="training.html">Training</a>
 
-            <a href="contact.html" class="nav-btn"
-              ><button>Contact<i class="fa-solid fa-arrow-right"></i></button
-            ></a>
+            <a href="contact.html" class="nav-btn btn"
+              >Contact<i class="ri-contacts-book-3-line"></i>
+            </a>
           </div>
 
           <div class="hamburger" onclick="toggleMenu(this)">
@@ -61,14 +66,14 @@
           </div>
         </div>
         <ul class="mobile-menu">
-          <li><a href="listings.html">Properties</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="listings.html">Listings</a></li>
           <li><a href="training.html">Training</a></li>
-          <li><a href="contact.html">Contact</a></li>
           <li>
-            <a href="contact.html"
-              >Schedule a Call<i class="fa-solid fa-arrow-right"></i
-            ></a>
+            <a href="contact.html" class="nav-btn btn"
+              >Contact<i class="ri-contacts-book-3-line"></i>
+            </a>
           </li>
         </ul>
       </div>
@@ -87,13 +92,13 @@
         <i class="fa-solid fa-phone"></i>
         <h3>Call Me</h3>
         <p>Mon-Fri, 9am-6pm PST</p>
-        <p><a href="tel:+2349012345678">+234 901 234 5678</a></p>
+        <p><a href="tel:+2341234567890">+234 123 456 7890</a></p>
       </div>
       <div class="contactTile color2">
         <i class="fa-solid fa-envelope"></i>
         <h3>Email Me</h3>
         <p>I'll respond within 24 hours</p>
-        <p><a href="mailto:doxahmedia@gmail.com">doxahmedia@gmail.com</a></p>
+        <p><a href="">doxahmedia@gmail.com</a></p>
       </div>
       <div class="contactTile color3">
         <i class="fa-solid fa-map-marker-alt"></i>
@@ -111,29 +116,7 @@
           ><button id="teamBtn">Team Training</button>
         </div>
         <!-- Personal Form -->
-        <form
-          id="personalForm"
-          action="https://formsubmit.co/unaegbugolden@yahoo.com"
-          method="POST"
-          class="contact-form"
-        >
-          <!-- Honeypot anti-spam field (invisible to humans) -->
-          <input type="text" name="_honey" style="display: none" />
-
-          <!-- Redirect on success -->
-          <input
-            type="hidden"
-            name="_next"
-            value="https://goldenchidi.site/thank-you.html"
-          />
-
-          <!-- Redirect on error -->
-          <input
-            type="hidden"
-            name="_error"
-            value="https://goldenchidi.site/error.html"
-          />
-
+        <form id="personalForm" class="contact-form">
           <div class="form-row">
             <div class="form-group">
               <label for="firstName">First Name*</label>
@@ -193,29 +176,7 @@
         <!-- Personal form ends -->
 
         <!-- Team Form starts -->
-        <form
-          id="teamForm"
-          action="https://formsubmit.co/unaegbugolden@yahoo.com"
-          method="POST"
-          class="contact-form"
-        >
-          <!-- Honeypot anti-spam field (invisible to humans) -->
-          <input type="text" name="_honey" style="display: none" />
-
-          <!-- Redirect on success -->
-          <input
-            type="hidden"
-            name="_next"
-            value="https://goldenchidi.site/thank-you.html"
-          />
-
-          <!-- Redirect on error -->
-          <input
-            type="hidden"
-            name="_error"
-            value="https://goldenchidi.site/error.html"
-          />
-
+        <form id="teamForm" class="contact-form">
           <div class="form-row">
             <div class="form-group">
               <label for="fullName">Your Name*</label>
@@ -275,6 +236,7 @@
       </div>
     </section>
     <!-- Form Wrapper End -->
+
     <footer class="site-footer">
       <div class="footer-content">
         <div class="footer-columns">
@@ -286,69 +248,27 @@
             </p>
           </div>
           <div class="footer-section align-center">
-            <p><strong>Quick Links</strong></p>
-            <a href="index.html">Home</a>
-            <a href="listings.html">Properties</a>
-            <a href="about.html">About</a>
-            <a href="training.html">Training</a>
-            <a href="contact.html#formBackground">Book Consultaton</a>
-            <a href="contact.html">Contact</a>
-          </div>
-          <div class="footer-section align-center2">
-            <p><strong>Connect</strong></p>
-            <a
-              href="https://www.instagram.com/listings_bygolden"
-              target="_blank"
-              rel="noopener"
-            >
-              <i class="fab fa-instagram"></i> Instagram
-            </a>
-            <a
-              href="https://www.linkedin.com/in/golden-chidi-unaegbu-52b3b5150"
-              target="_blank"
-              rel="noopener"
-            >
-              <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a
-              href="https://youtube.com/@thegoldenchidi"
-              target="_blank"
-              rel="noopener"
-            >
-              <i class="fab fa-youtube"></i> Youtube
-            </a>
-            <a
-              href="https://www.facebook.com/unaegbu.golden"
-              target="_blank"
-              rel="noopener"
-            >
-              <i class="fab fa-facebook"></i> Facebook
-            </a>
+            <div class="align-center1">
+              <p><strong>Quick Links</strong></p>
+              <a href="index.html">Home</a>
+              <a href="listings.html">Properties</a>
+              <a href="about.html">About</a>
+              <a href="training.html">Training</a>
+              <a href="contact.html#formBackground">Book Consultaton</a>
+              <a href="contact.html">Contact</a>
+            </div>
+            <div class="align-center2">
+              <p><strong>Connect</strong></p>
+              <a href=""> <i class="fab fa-instagram"></i> Instagram </a>
+              <a href=""> <i class="fab fa-linkedin"></i> LinkedIn </a>
+              <a href=""> <i class="fab fa-youtube"></i> Youtube </a>
+              <a href=""> <i class="fab fa-facebook"></i> Facebook </a>
+            </div>
           </div>
           <div class="footer-section align-right">
             <p class="mailHead"><strong>Stay Updated</strong></p>
             <p>Get market insights & training tips</p>
-            <form
-              action="https://formsubmit.co/doxahmedia@gmail.com"
-              method="POST"
-              class="contact-form"
-            >
-              <!-- Honeypot anti-spam field (invisible to humans) -->
-              <input type="text" name="_honey" style="display: none" />
-
-              <!-- Redirect on success -->
-              <input
-                type="hidden"
-                name="_next"
-                value="https://goldenchidi.site/thank-you.html"
-              />
-
-              <!-- Redirect on error -->
-              <input
-                type="hidden"
-                name="_error"
-                value="https://goldenchidi.site/error.html"
-              />
+            <form>
               <div class="form-group">
                 <input
                   type="email"
@@ -372,6 +292,9 @@
         <p class="footer-copy">© 2026 Golden Chidi. All rights reserved.</p>
       </div>
     </footer>
+    <button id="scrollTopBtn" class="action-btn">
+      <i class="ri-arrow-up-s-line"></i>
+    </button>
     <script src="script.js"></script>
   </body>
 </html>
