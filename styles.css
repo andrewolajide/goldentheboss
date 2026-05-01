@@ -1241,30 +1241,13 @@ LISTINGS PAGE
   color: #333;
 }
 
-/* .propertyPageClose button, 
-.aboutPageClose button,
-.trainingPageClose button {
-  background: #d4af37;
-  border: none;
-  color: #181717;
-  border-radius: 50px;
-  padding: 1rem 2rem;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  font-family: "Inter", sans-serif;
-  margin-top: 1rem;
-}*/
-
 /*==========================
 PROPERTY DETAILS PAGE
 ============================ */
 
 .pViewHead {
-  padding: 6rem 4rem 0 4rem;
+  padding: clamp(5rem, 6vw, 6rem) clamp(1.5rem, 6vw, 4rem) 0
+    clamp(1.5rem, 6vw, 4rem);
 }
 
 .pViewHead .viewAll {
@@ -1304,8 +1287,7 @@ PROPERTY DETAILS PAGE
 .gallery-container {
   display: flex;
   gap: 12px;
-  height: 550px; /* Adjust height as needed */
-  margin: 20px 0;
+  height: 550px;
   width: 100%;
 }
 
