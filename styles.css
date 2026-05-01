@@ -110,7 +110,8 @@ section {
 }
 
 .mobile-menu .nav-btn {
-  width: 100%;
+  width: calc(100% - 2rem);
+  margin: 0 1rem;
   justify-content: center;
 }
 
@@ -202,7 +203,7 @@ section {
 }
 
 .mobile-menu {
-  display: none; /* Controlled by .active */
+  display: none;
   flex-direction: column;
   position: fixed;
   top: 0;
@@ -216,7 +217,7 @@ section {
   overflow-y: auto;
   /* FIX 2: Ensure content starts at the top and can grow downwards */
   padding-top: 4rem;
-  padding-bottom: 3rem; /* Extra space at the bottom so last items aren't cut off */
+  padding-bottom: 3rem;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -257,7 +258,7 @@ section {
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: clamp(6rem, 9vw, 8rem) clamp(1.5rem, 6vw, 4rem)
+  padding: clamp(8rem, 11rem - 4vw, 10rem) clamp(1.5rem, 6vw, 4rem)
     clamp(2rem, 6vw, 3rem) clamp(1.5rem, 6vw, 4rem);
 }
 
@@ -298,14 +299,14 @@ section {
   border: 2px solid #d4af37;
   border-radius: 50px;
   padding: 0.5rem 1rem;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 4vw, 0.9rem);
   position: relative;
   display: inline-block;
   margin-bottom: 0.5rem;
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(2.2rem, 6vw, 4rem);
   line-height: 1.1;
   padding: 1rem 0;
   color: white;
@@ -313,7 +314,7 @@ section {
 }
 
 .heroHead span {
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(2.2rem, 6vw, 4rem);
   font-weight: 400;
   line-height: 1.1;
   padding: 0;
@@ -716,6 +717,7 @@ section {
 }
 
 .trainingSection .pHead {
+  margin-top: 0.5rem;
   font-size: 1.1rem;
   max-width: 600px;
   justify-self: center;
@@ -723,6 +725,7 @@ section {
 
 .trainingSection h2 {
   font-size: clamp(2rem, 6vw, 3rem);
+  line-height: 1.3;
 }
 
 .grid {
@@ -767,6 +770,7 @@ section {
 
 .gridOverlay h3 {
   font-size: 2rem;
+  line-height: 1.2;
   margin-bottom: 0.5rem;
 }
 
@@ -813,6 +817,7 @@ section {
 
 .gridBox h3 {
   font-size: 1.5rem;
+  line-height: 1.3;
 }
 
 .gridBox p {
@@ -886,6 +891,7 @@ section {
 
 .testimonials h2 {
   font-size: clamp(2rem, 6vw, 3rem);
+  line-height: 1.3;
 }
 
 .testimonialRow {
@@ -968,15 +974,16 @@ section {
 
 .contact h2 {
   font-size: clamp(2rem, 6vw, 2.5rem);
+  line-height: 1.3;
   font-weight: 200;
 }
 
-.contact button {
+.contact-btn {
   background: #d4af37;
   border: none;
   color: #181717;
   border-radius: 50px;
-  padding: 1rem 2.5rem;
+  padding: 0.9rem 2rem;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -984,7 +991,8 @@ section {
   font-size: 1.1rem;
   font-weight: 600;
   font-family: "Inter", sans-serif;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  text-decoration: none;
 }
 
 .fade-to-white {
@@ -1031,7 +1039,6 @@ LISTINGS PAGE
   padding: 0 15px;
 }
 
-/* Hero Search Specific Styling */
 .search-item select {
   border: 1px solid var(--accent);
   border-radius: 10px;
@@ -1070,11 +1077,10 @@ LISTINGS PAGE
 
 .listings-search-container .search-main {
   display: grid;
-  /* 3 equal columns for the 6 items */
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 1.2rem;
   background: white;
-  padding: 30px;
+  padding: clamp(1rem, 3vw, 1.5rem);
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   align-items: end;
@@ -1224,16 +1230,18 @@ LISTINGS PAGE
 .aboutPageClose h2,
 .trainingPageClose h2 {
   font-size: clamp(2rem, 6vw, 2.5rem);
+  line-height: 1.3;
 }
 
 .propertyPageClose p,
 .aboutPageClose p,
 .trainingPageClose p {
-  font-size: 1.2rem;
+  font-size: clamp(1.1rem, 4vw, 1.2rem);
+  margin-top: 1rem;
   color: #333;
 }
 
-.propertyPageClose button,
+/* .propertyPageClose button, 
 .aboutPageClose button,
 .trainingPageClose button {
   background: #d4af37;
@@ -1249,7 +1257,7 @@ LISTINGS PAGE
   font-weight: 600;
   font-family: "Inter", sans-serif;
   margin-top: 1rem;
-}
+}*/
 
 /*==========================
 PROPERTY DETAILS PAGE
@@ -1738,7 +1746,8 @@ textarea {
 
 .myJourney h2 {
   font-size: clamp(2rem, 6vw, 2.5rem);
-  margin-bottom: 1rem;
+  line-height: 1.3;
+  margin-bottom: 1.4rem;
   color: #111;
 }
 .myJourney p {
@@ -1749,7 +1758,6 @@ textarea {
 }
 
 .coreValues {
-  padding: 4rem 4rem;
   background: #f5f1f1;
 }
 
@@ -1766,12 +1774,12 @@ textarea {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 2rem;
-  padding: 4rem 0;
+  padding: clamp(2rem, 3vw, 4rem) 0;
 }
 
 .valueBox {
   background: white;
-  padding: 3rem;
+  padding: clamp(1.5rem, 3vw, 3rem);
   border-radius: 30px;
   flex: 1 1 calc(33% - 2rem);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -1815,7 +1823,12 @@ textarea {
 
 .achievements h2 {
   font-size: clamp(2rem, 6vw, 3rem);
+  line-height: 1.3;
   text-align: center;
+}
+
+.achievements h2 + p {
+  margin-top: 0.5rem;
 }
 
 .achievements p {
@@ -1831,7 +1844,7 @@ textarea {
 
 .awardBox {
   background: #faf5e5;
-  padding: 3rem;
+  padding: clamp(1.5rem, 3vw, 3rem);
   border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
   transition:
@@ -1982,7 +1995,7 @@ CONTACT PAGE
   border-radius: 50px;
   padding: 0.8rem 1.1rem;
   cursor: pointer;
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 3vw, 0.95rem);
   font-weight: 600;
   font-family: "Inter", sans-serif;
 }
@@ -2114,7 +2127,7 @@ Training Page
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
   gap: 2rem;
-  padding: 4rem 0 2rem 0;
+  padding: clamp(2rem, 3vw, 4rem) 0 2rem 0;
   text-align: left;
 }
 
@@ -2125,7 +2138,7 @@ Training Page
 
 .programBox {
   background: white;
-  padding: 3rem;
+  padding: clamp(1.5rem, 3vw, 3rem);
   border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
   transition:
@@ -2201,7 +2214,6 @@ Training Page
 }
 
 .trainingTopics {
-  padding: 4rem 4rem;
   background: #f5f1f1;
   text-align: center;
 }
@@ -2224,7 +2236,7 @@ Training Page
 
 .topicBox {
   background: white;
-  padding: 2rem;
+  padding: clamp(1.5rem, 3vw, 2rem);
   border-radius: 30px;
   flex: 1 1 calc(33% - 2rem);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.18);
@@ -2262,7 +2274,6 @@ Training Page
 }
 
 .stories {
-  padding: 4rem 4rem;
   text-align: center;
 }
 
@@ -2284,7 +2295,7 @@ Training Page
 
 .storiesBox {
   background: white;
-  padding: 2rem;
+  padding: clamp(1.5rem, 3vw, 2rem);
   border-radius: 30px;
   flex: 1 1 calc(33% - 2rem);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.18);
@@ -2316,7 +2327,8 @@ Training Page
 }
 
 .storiesBox h3 {
-  font-size: 1.7rem;
+  font-size: clamp(1.4rem, 3vw, 1.7rem);
+  line-height: 1.3;
   padding: 1rem 0;
   font-weight: 700;
 }
@@ -2327,7 +2339,7 @@ Training Page
 }
 
 .storiesBox .nameTitle h5 {
-  font-size: 1.2rem;
+  font-size: clamp(1.1rem, 3vw, 1.2rem);
 }
 
 .storiesBox .tag {
@@ -2338,8 +2350,8 @@ Training Page
 }
 
 .storiesBox .tag .initials {
-  width: 60px;
-  height: 60px;
+  width: clamp(40px, 5vw, 60px);
+  height: clamp(40px, 5vw, 60px);
   background: #555;
   border-radius: 50%;
   display: flex;
@@ -2352,11 +2364,11 @@ Training Page
 
 .storiesBox .tag .initials p {
   color: white;
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 3vw, 1.1rem);
 }
 
 .storiesBox .tag p {
-  font-size: 0.85rem;
+  font-size: clamp(0.8rem, 3vw, 0.85rem);
 }
 
 .faqs {
@@ -2365,6 +2377,7 @@ Training Page
 
 .faqs h2 {
   font-size: clamp(2rem, 6vw, 3rem);
+  line-height: 1.3;
   text-align: center;
 }
 
@@ -2383,7 +2396,7 @@ Training Page
 
 .faqBox {
   background: white;
-  padding: 3rem;
+  padding: clamp(1.5rem, 3vw, 3rem);
   border-radius: 30px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.18);
   transition:
@@ -2878,6 +2891,49 @@ ELEMENTS SCALE ANIMATION
 @media (max-width: 370px) {
   .pedigree {
     grid-template-columns: 1fr;
+  }
+
+  .largeImg {
+    aspect-ratio: 5/7;
+  }
+
+  .largeimgtext {
+    padding: 1rem 1.5rem;
+  }
+
+  .aboutImages {
+    padding: 0.5rem;
+  }
+
+  .profilePic,
+  .aboutPic2 {
+    box-shadow: none;
+  }
+
+  .trainingSection .pHead {
+    margin-top: 1rem;
+  }
+
+  .gridImage {
+    aspect-ratio: 5/8;
+  }
+
+  .testimonials h2 + p {
+    margin: 1rem 0;
+  }
+
+  .contactImage {
+    aspect-ratio: 4/5;
+    object-position: left;
+  }
+
+  .contact-btn {
+    margin-bottom: 1rem;
+  }
+
+  .coreValues h2 + p {
+    max-width: 250px;
+    justify-self: center;
   }
 
   .align-center {
